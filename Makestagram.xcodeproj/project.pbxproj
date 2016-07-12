@@ -40,6 +40,8 @@
 		F000B0CF1D1DE3B5005F2682 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = F000B0CE1D1DE3B5005F2682 /* Post.swift */; };
 		F000B0D31D21ACD2005F2682 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F000B0D21D21ACD2005F2682 /* PostTableViewCell.swift */; };
 		F000B0D51D21C88E005F2682 /* ParseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F000B0D41D21C88E005F2682 /* ParseHelper.swift */; };
+		F02C27DE1D24336100072C71 /* FriendSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C27DD1D24336100072C71 /* FriendSearchTableViewCell.swift */; };
+		F02C27E01D24766000072C71 /* PostSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02C27DF1D24766000072C71 /* PostSectionHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		F000B0CE1D1DE3B5005F2682 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		F000B0D21D21ACD2005F2682 /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		F000B0D41D21C88E005F2682 /* ParseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseHelper.swift; sourceTree = "<group>"; };
+		F02C27DD1D24336100072C71 /* FriendSearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendSearchTableViewCell.swift; sourceTree = "<group>"; };
+		F02C27DF1D24766000072C71 /* PostSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostSectionHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -293,6 +297,7 @@
 		F000B0D01D21ACB2005F2682 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				F02C27DC1D24331600072C71 /* FriendSearch */,
 				F000B0D11D21ACB2005F2682 /* Timeline */,
 			);
 			path = Views;
@@ -302,8 +307,17 @@
 			isa = PBXGroup;
 			children = (
 				F000B0D21D21ACD2005F2682 /* PostTableViewCell.swift */,
+				F02C27DF1D24766000072C71 /* PostSectionHeaderView.swift */,
 			);
 			path = Timeline;
+			sourceTree = "<group>";
+		};
+		F02C27DC1D24331600072C71 /* FriendSearch */ = {
+			isa = PBXGroup;
+			children = (
+				F02C27DD1D24336100072C71 /* FriendSearchTableViewCell.swift */,
+			);
+			path = FriendSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,6 +378,7 @@
 				TargetAttributes = {
 					62C8C1DF1B06BD6500DC3EA7 = {
 						CreatedOnToolsVersion = 6.3;
+						DevelopmentTeam = 9MD5TLEWD4;
 					};
 					62C8C1F41B06BD6500DC3EA7 = {
 						CreatedOnToolsVersion = 6.3;
@@ -523,7 +538,9 @@
 				F000B0C31D1DA198005F2682 /* TimelineViewController.swift in Sources */,
 				F000B0CC1D1DAE91005F2682 /* PhotoTakingHelper.swift in Sources */,
 				F000B0C51D1DA1C4005F2682 /* PhotoViewController.swift in Sources */,
+				F02C27DE1D24336100072C71 /* FriendSearchTableViewCell.swift in Sources */,
 				62C8C1E61B06BD6500DC3EA7 /* AppDelegate.swift in Sources */,
+				F02C27E01D24766000072C71 /* PostSectionHeaderView.swift in Sources */,
 				627718971B0A581700AF5C6E /* FilterViewController.swift in Sources */,
 				F000B0D51D21C88E005F2682 /* ParseHelper.swift in Sources */,
 				F000B0D31D21ACD2005F2682 /* PostTableViewCell.swift in Sources */,
@@ -658,14 +675,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Makestagram/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dianalim.Makestagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Makestagram/Makestagram-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -677,14 +697,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = "$(inherited)";
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = Makestagram/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = "Make-School.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dianalim.Makestagram;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Makestagram/Makestagram-Bridging-Header.h";
 			};
 			name = Release;
