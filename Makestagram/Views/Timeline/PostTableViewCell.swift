@@ -12,7 +12,7 @@ import Parse
 
 class PostTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var PostImageView: UIImageView!
+    @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var likesIconImageView: UIImageView!
     @IBOutlet weak var likesLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
