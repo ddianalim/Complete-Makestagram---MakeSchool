@@ -84,7 +84,7 @@ extension TimelineViewController: UITableViewDataSource {
         post.downloadImage()
         post.fetchLikes()
         cell.post = post
-        cell.timeline = self
+  /*      cell.timeline = self */
         
         return cell
     }
